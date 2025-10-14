@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@iconify/tailwind4;
+
+
+@theme {
+  /* 🎨 Colors */
+  --color-primary: #00856F;
+  --color-primary-light01: #DCE9E2;
+  --color-primary-light02: #F7F9F9;
+  --color-primary-beige: #FFFAF1;
+  --color-primary-hover: #00453A;
+
+  --color-secondary-headline: #061800;
+  --color-secondary-paragraph: #384633;
+  --color-secondary-white: #ffffff;
+
+  /* 🔠 Font */
+  --font-sans: "DM Sans", sans-serif;
+
+  /* 🧱 Font weights */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* 🖋 Font sizes (example desktop/mobile) */
+  --text-desktop-14: 14px;
+  --text-desktop-16: 16px;
+  --text-desktop-18: 18px;
+  --text-desktop-24: 24px;
+  --text-desktop-40: 40px;
+  --text-desktop-48: 48px;
+  --text-desktop-52: 52px;
+
+  --text-mobile-14: 14px;
+  --text-mobile-16: 16px;
+  --text-mobile-18: 18px;
+  --text-mobile-24: 24px;
+  --text-mobile-30: 30px;
+  --text-mobile-34: 34px;
+  --text-mobile-48: 48px;
+}
