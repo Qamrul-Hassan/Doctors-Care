@@ -119,12 +119,16 @@
 
   <!-- About Section -->
 <section class="md:py-20 py-12 bg-primary-beige">
-  <div class="py-12 max-w-screen-xl mx-auto px-4">
-    <!-- On mobile: text first, image below -->
-    <!-- On desktop: image left, text right -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center md:flex-row-reverse">
+  <div class="py-12 max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
+    
+      <!-- Image-->
+      <div class="md:w-1/2 w-full order-2 md:order-start flex justify-center">
+        <img src="./images/about.png" alt="About DoctorCare"
+             class="w-full h-auto rounded-lg shadow-lg">
+      </div>
+
       <!-- Text -->
-      <div class="order-1 md:order-2">
+      <div class="md:w-1/2 w-full order-1 md:order-2 text-center md:text-left">
         <h4 class="text-primary mb-6 font-bold">SOBRE NÓS</h4>
         <h1 class="text-secondary-headline font-bold text-5xl mb-8">
           Entenda quem somos e por que existimos
@@ -137,15 +141,11 @@
           garantir uma cura duradoura.
         </p>
       </div>
-
-      <!-- Image -->
-      <div class="flex justify-center order-2 md:order-1">
-        <img src="./images/about.png" alt="About DoctorCare"
-             class="w-full h-auto rounded-lg shadow-lg">
       </div>
-    </div>
-  </div>
 </section>
+
+
+
 
 
   <!-- Mobile menu toggle -->
