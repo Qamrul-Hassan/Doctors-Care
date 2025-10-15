@@ -1,12 +1,17 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="./output.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
-
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
   <title>DoctorCare</title>
 </head>
 
@@ -20,73 +25,99 @@
       </div>
 
       <!-- Menu (Desktop) -->
-      <ul id="nav-links" class="hidden md:flex space-x-8 text-lg font-medium text-secondary-paragraph">
-        <li><a href="#home" class="hover:text-primary-hover transition">Início</a></li>
-        <li><a href="#services" class="hover:text-primary-hover transition">Serviços</a></li>
-        <li><a href="#about" class="hover:text-primary-hover transition">Sobre</a></li>
-        <li><a href="#contact" class="hover:text-primary-hover transition">Depoimentos</a></li>
+      <ul id="nav-links" class="hidden lg:flex space-x-8 text-lg font-bold text-secondary-paragraph">
+        <li><a href="#home" class="hover:text-primary-hover hover:border-b-4 border-primary transition">Início</a></li>
+        <li><a href="#about" class="hover:text-primary-hover hover:border-b-4 border-primary transition">Sobre</a></li>
+        <li><a href="#services" class="hover:text-primary-hover hover:border-b-4 border-primary transition">Serviços</a>
+        </li>
+        <li><a href="#contact"
+            class="hover:text-primary-hover hover:border-b-4 border-primary transition">Depoimentos</a></li>
       </ul>
 
       <!-- Call to Action (Desktop) -->
-      <div class="hidden md:block">
+      <div class="hidden lg:block">
         <a id="contact-button" href="#appointment"
-           class="border-2 border-primary text-primary hover:bg-primary-hover hover:text-white rounded-full py-3 px-6 font-bold text-lg transition">
-          Agendar consulta
+          class="border-2 border-primary text-primary hover:bg-primary-hover hover:text-white rounded-full py-3 px-6 font-bold text-lg transition">
+          Agende sua consulta
         </a>
       </div>
 
       <!-- Mobile Menu Button -->
-      <button id="mobile-menu-button"
-              class="md:hidden text-primary hover:text-primary-hover p-2"
-              aria-label="Open menu">
+      <button id="mobile-menu-button" class="lg:hidden text-primary hover:text-primary-hover p-2"
+        aria-label="Open menu">
         <i id="menu-icon" class="ri-menu-line text-3xl"></i>
       </button>
+
     </nav>
 
-    <!-- Mobile Dropdown Menu -->
-    <div id="mobile-menu" class="hidden flex-col bg-white shadow-md md:hidden text-lg font-medium text-secondary-paragraph">
-      <a href="#home" class="py-3 px-6 hover:bg-primary-light02">Início</a>
-      <a href="#services" class="py-3 px-6 hover:bg-primary-light02">Serviços</a>
-      <a href="#about" class="py-3 px-6 hover:bg-primary-light02">Sobre</a>
-      <a href="#contact" class="py-3 px-6 hover:bg-primary-light02">Depoimentos</a>
-      <a href="#appointment"
-         class="m-4 text-center border-2 border-primary text-primary hover:bg-primary-hover hover:text-white rounded-full py-3 font-bold transition">
-         Agendar consulta
-      </a>
-    </div>
-  </header>
-  <!-- End Header -->
+    <!-- Mobile Full Screen Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 w-full h-screen bg-primary z-40 md:hidden">
+      <!-- Close Button (Top Right Corner) -->
+      <div class="absolute top-6 right-6">
+        <button id="close-menu-button" class="text-white hover:text-gray-300 p-2 transition">
+          <i class="ri-close-line text-3xl"></i>
+        </button>
+      </div>
 
-  <!-- Hero Section -->
-<section id="home" class="pt-32 pb-16 bg-primary-light01">
-  <div class="container max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-10">
-    <!-- Text -->
-    <div class="w-full md:w-1/2 text-center md:text-left order-1 md:order-1">
-      <h2 class="text-sm font-bold text-primary mb-4">BOAS-VINDAS A DOCTORCARE 👋</h2>
-      <h1 class="text-4xl lg:text-6xl font-bold text-secondary-headline mb-6">
-        Assistência médica simplificada para todos
-      </h1>
-      <p class="text-lg md:text-xl text-secondary-paragraph max-w-lg mx-auto md:mx-0">
-        Os médicos da DoctorCare vão além dos sintomas para tratar a causa raiz de sua doença e proporcionar uma cura a longo prazo.
-      </p>
-      <div>
-        <a href="#appointment"
-           class="inline-flex items-center justify-center gap-2 mt-6 bg-primary text-white hover:bg-primary-hover rounded-full py-4 px-8 font-bold text-sm transition">
-          <i class="ri-whatsapp-line"></i> Agende sua consulta
-        </a>
+      <!-- Menu Content (Centered) -->
+      <div class="flex flex-col items-center justify-center h-full">
+        <div class="flex flex-col items-center gap-8">
+          <!-- Navigation Links -->
+          <a href="#home" class="text-2xl font-bold text-white hover:text-secondary-headline transition">Início</a>
+          <a href="#about" class="text-2xl font-bold text-white hover:text-secondary-headline transition">Sobre</a>
+          <a href="#services"
+            class="text-2xl font-bold text-white hover:text-secondary-headline transition">Serviços</a>
+          <a href="#contact"
+            class="text-2xl font-bold text-white hover:text-secondary-headline transition">Depoimentos</a>
+
+          <!-- CTA Button -->
+          <a href="#appointment"
+            class="mt-12 bg-white text-primary hover:bg-primary-hover hover:text-secondary-white rounded-full py-4 px-8 font-bold text-sm transition">
+            AGENDE SUA CONSULTA
+          </a>
+
+          <!-- Social Icons -->
+          <div class="text-center text-white hover:text-gray-300 transition text-3xl flex gap-6 mt-8">
+            <i class="ri-instagram-line hover:text-secondary-headline"></i>
+            <i class="ri-facebook-fill hover:text-secondary-headline"></i>
+            <i class="ri-youtube-line hover:text-secondary-headline"></i>
+          </div>
+        </div>
       </div>
     </div>
+  </header>
 
-    <!-- Image -->
-    <div class="w-full md:w-1/2 flex justify-center order-2 md:order-2 ">
-      <img src="./images/hero-banner.png" alt="DoctorCare Hero" class="w-full max-w-md md:max-w-lg h-auto">
+  <!-- Hero Section -->
+  <section id="home" class="pt-32 pb-16 bg-primary-light01">
+    <div class="container max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-10">
+      <!-- Text -->
+      <div class="w-full md:w-1/2 text-center md:text-left order-1 md:order-1">
+        <h2 class="text-sm font-bold text-primary mb-4">BOAS-VINDAS A DOCTORCARE 👋</h2>
+        <h1 class="text-4xl lg:text-6xl font-bold text-secondary-headline mb-6">
+          Assistência médica simplificada para todos
+        </h1>
+        <p class="text-lg md:text-xl text-secondary-paragraph max-w-lg mx-auto md:mx-0">
+          Os médicos da DoctorCare vão além dos sintomas para tratar a causa raiz de sua doença e proporcionar uma cura
+          a longo prazo.
+        </p>
+        <div>
+          <a href="#appointment"
+            class="inline-flex items-center justify-center gap-2 mt-6 bg-primary text-white hover:bg-primary-hover rounded-full py-4 px-8 font-bold text-sm transition">
+            <i class="ri-whatsapp-line"></i> Agende sua consulta
+          </a>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="w-full md:w-1/2 flex justify-center order-2 md:order-2">
+        <img src="./images/hero-banner.png" alt="DoctorCare Hero" class="w-full max-w-md md:max-w-lg h-auto">
+      </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- Stats Section -->
-  <section class="container max-w-screen-xl mx-auto bg-primary-beige rounded-2xl shadow-lg relative z-20 -mt-28 md:-mt-20 px-6 py-10">
+  <section
+    class="container max-w-screen-xl mx-auto bg-primary-beige rounded-2xl shadow-lg relative z-20 -mt-28 md:-mt-20 px-6 py-10">
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
       <div class="md:border-r border-primary">
         <h3 class="text-4xl md:text-5xl font-bold text-secondary-headline">+3.500</h3>
@@ -112,22 +143,18 @@
       </h2>
 
       <div id="services-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        <!-- Service items will be injected here by services.js -->
+        <!-- Service items injected by services.js -->
       </div>
     </div>
   </section>
 
   <!-- About Section -->
-<section class="md:py-20 py-12 bg-primary-beige">
-  <div class="py-12 max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
-    
-      <!-- Image-->
-      <div class="md:w-1/2 w-full order-2 md:order-start flex justify-center">
-        <img src="./images/about.png" alt="About DoctorCare"
-             class="w-full h-auto rounded-lg shadow-lg">
+  <section id="about" class="md:py-20 py-12 bg-primary-beige">
+    <div class="py-12 max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
+      <div class="md:w-1/2 w-full order-2 md:order-1 flex justify-center">
+        <img src="./images/about.png" alt="About DoctorCare" class="w-full h-auto rounded-lg shadow-lg">
       </div>
 
-      <!-- Text -->
       <div class="md:w-1/2 w-full order-1 md:order-2 text-center md:text-left">
         <h4 class="text-primary mb-6 font-bold">SOBRE NÓS</h4>
         <h1 class="text-secondary-headline font-bold text-5xl mb-8">
@@ -140,27 +167,60 @@
           personalizado que vai além dos sintomas, buscando a causa raiz para
           garantir uma cura duradoura.
         </p>
+        <div>
+          <a href="#appointment"
+            class="inline-flex items-center justify-center gap-2 mt-6 bg-primary text-white hover:bg-primary-hover rounded-full py-4 px-8 font-bold text-sm transition">
+            <i class="ri-whatsapp-line"></i> Agende sua consulta
+          </a>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="md:py-20 py-12 bg-secondary-white">
+    <div class="py-12 max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
+      <div class="md:w-1/2 w-full order-2 md:order-last flex justify-center">
+        <img src="./images/contact.png" alt="About DoctorCare" class="w-full h-auto rounded-lg shadow-lg">
       </div>
-</section>
 
+      <div class="md:w-1/2 w-full order-1 md:order-2 text-center md:text-left">
+        <h1 class="text-secondary-headline mb-6 text-5xl font-bold">Entre em contato com a gente!</h1>
+        <p class="text-secondary-headline text-xl mb-6">
+          <i class="text-primary text-2xl ri-map-pin-line"></i> R. Amauri Souza, 346
+        </p>
+        <p class="text-secondary-headline text-xl mb-8">
+          <i class="text-primary text-2xl ri-mail-line"></i> contato@doctorcare.com
+        </p>
 
+        <a href="#appointment"
+          class="inline-flex items-center justify-center gap-2 mt-6 bg-primary text-white hover:bg-primary-hover rounded-full py-4 px-8 font-bold text-sm transition">
+          <i class="ri-whatsapp-line"></i> Agende sua consulta
+        </a>
+      </div>
+    </div>
+  </section>
 
+  <!-- Footer -->
+  <footer class="bg-primary py-12">
+    <div
+      class="max-w-screen-xl container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-8">
+      <div>
+        <a href="/" class="text-secondary-white text-5xl md:text-7xl mb-4">Doctor<span class="font-bold">Care</span></a>
+        <p class="mt-4 text-secondary-white text-sm">&copy;2025 - DoctorCare.</p>
+        <p class="mt-4 text-secondary-white text-sm">Todos os direitos reservados.</p>
+      </div>
+      <div class="flex space-x-10 text-secondary-white text-2xl">
+        <a href="/"><i class="ri-instagram-line hover:text-secondary-headline"></i></a>
+        <a href="/"><i class="ri-facebook-fill hover:text-secondary-headline"></i></a>
+        <a href="/"><i class="ri-youtube-line hover:text-secondary-headline"></i></a>
+      </div>
+    </div>
+  </footer>
 
-
-  <!-- Mobile menu toggle -->
-  <script>
-    const menuBtn = document.getElementById("mobile-menu-button");
-    const menuIcon = document.getElementById("menu-icon");
-    const mobileMenu = document.getElementById("mobile-menu");
-
-    menuBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-      menuIcon.classList.toggle("ri-menu-line");
-      menuIcon.classList.toggle("ri-close-line");
-    });
-  </script>
-  <!-- External JS (unchanged) -->
+  <!-- JS Files -->
   <script src="js/services.js"></script>
+  <script src="js/mobile-menu.js"></script>
 </body>
+
 </html>
