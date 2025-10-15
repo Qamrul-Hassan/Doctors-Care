@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="./output.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
-  <!-- If you installed Remix locally, remove this CDN -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
 
   <title>DoctorCare</title>
@@ -13,8 +12,8 @@
 
 <body class="font-sans bg-primary-light02 overflow-x-hidden">
   <!-- Header -->
-  <header id="header" class="bg-primary-light01 fixed top-0 right-0 w-full z-50 shadow-sm">
-    <nav class="container max-w-[1380px] mx-auto flex justify-between items-center px-6 py-4">
+  <header id="header" class="bg-primary-light01 fixed top-0 left-0 w-full z-50 shadow-sm">
+    <nav class="container max-w-screen-xl mx-auto flex justify-between items-center px-4 sm:px-6 py-4">
       <!-- Logo -->
       <div class="text-3xl font-bold">
         <a href="/" class="text-black">Doctor<span class="text-primary">Care</span></a>
@@ -38,7 +37,7 @@
 
       <!-- Mobile Menu Button -->
       <button id="mobile-menu-button"
-              class="md:hidden text-primary hover:text-primary-hover p-3"
+              class="md:hidden text-primary hover:text-primary-hover p-2"
               aria-label="Open menu">
         <i id="menu-icon" class="ri-menu-line text-3xl"></i>
       </button>
@@ -59,75 +58,81 @@
   <!-- End Header -->
 
   <!-- Hero Section -->
-  <section class="py-28 bg-primary-light01 flex items-center justify-between gap-8">
-    <div class="container max-w-screen-[1380px] mx-auto px-4 flex md:flex-row flex-col items-center justify-between">
-      <!-- text -->
-      <div class="w-full md:w-2/3 text-center md:text-left mb-8 md:mb-0">
+  <section id="home" class="pt-32 pb-16 bg-primary-light01">
+    <div class="container max-w-screen-xl mx-auto px-4 flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+      <!-- Text -->
+      <div class="w-full md:w-1/2 text-center md:text-left">
         <h2 class="text-sm font-bold text-primary mb-4">BOAS-VINDAS A DOCTORCARE 👋</h2>
-        <h1 class="text-4xl lg:text-6xl font-bold text-secondary-headline mb-6 lg:w-2/3">
+        <h1 class="text-4xl lg:text-6xl font-bold text-secondary-headline mb-6">
           Assistência médica simplificada para todos
         </h1>
-        <p class="text-lg md:text-xl md:w-4/5 text-secondary-paragraph">
+        <p class="text-lg md:text-xl text-secondary-paragraph max-w-lg mx-auto md:mx-0">
           Os médicos da DoctorCare vão além dos sintomas para tratar a causa raiz de sua doença e proporcionar uma cura a longo prazo.
         </p>
-        <div class="w-full mx-auto">
-          <button class="mt-6 bg-primary text-secondary-white hover:bg-primary-hover rounded-full py-4 px-8 font-bold text-sm transition flex items-center justify-center gap-2 mx-auto md:mx-0">
-            <i class="ri-whatsapp-line"></i>
-            <a href="#appointment">Agende sua consulta</a>
-          </button>
+        <div>
+          <a href="#appointment"
+             class="inline-flex items-center justify-center gap-2 mt-6 bg-primary text-white hover:bg-primary-hover rounded-full py-4 px-8 font-bold text-sm transition">
+            <i class="ri-whatsapp-line"></i> Agende sua consulta
+          </a>
         </div>
       </div>
 
-      <!-- image -->
-      <div class="align-middle w-full md:w-1/2 flex justify-center">
-        <img src="./images/hero-banner.png" alt="">
+      <!-- Image -->
+      <div class="w-full md:w-1/2 flex justify-center">
+        <img src="./images/hero-banner.png" alt="DoctorCare Hero" class="w-full max-w-md md:max-w-lg h-auto">
       </div>
     </div>
   </section>
-<!-- stats Section -->
-<section class="container max-w-screen-xl mx-auto -mt-28 bg-primary-beige lg:h-52 lg:-mt-28 shadow-lg relative z-20 rounded-2xl flex items-center justify-center">
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 p-8 text-center w-full">
-    
-    <!-- Stat 1 -->
-    <div class="md:border-r border-primary pr-4 sm:pr-0 sm:border-r-0">
-      <h3 class="text-5xl font-bold text-secondary-headline">+3.500</h3>
-      <p class="text-primary mt-2 text-xl">Pacientes Satisfeitos</p>
-    </div>
 
-    <!-- Stat 2 -->
-    <div class="md:border-r border-primary pr-4 sm:pr-0 sm:border-r-0">
-      <h3 class="text-5xl font-bold  text-secondary-headline  border-primary">+15</h3>
-      <p class="text-primary mt-2 text-xl">Especialistas disponíveis</p>
+  <!-- Stats Section -->
+  <section class="container max-w-screen-xl mx-auto bg-primary-beige rounded-2xl shadow-lg relative z-20 -mt-10 md:-mt-20 px-6 py-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
+      <div class="md:border-r border-primary">
+        <h3 class="text-4xl md:text-5xl font-bold text-secondary-headline">+3.500</h3>
+        <p class="text-primary mt-2 text-lg md:text-xl">Pacientes Satisfeitos</p>
+      </div>
+      <div class="md:border-r border-primary">
+        <h3 class="text-4xl md:text-5xl font-bold text-secondary-headline">+15</h3>
+        <p class="text-primary mt-2 text-lg md:text-xl">Especialistas disponíveis</p>
+      </div>
+      <div>
+        <h3 class="text-4xl md:text-5xl font-bold text-secondary-headline">+10</h3>
+        <p class="text-primary mt-2 text-lg md:text-xl">Anos no mercado</p>
+      </div>
     </div>
+  </section>
 
-    <!-- Stat 3 -->
-    <div>
-      <h3 class="text-5xl font-bold text-secondary-headline">+10</h3>
-      <p class="text-primary mt-2 text-xl">Anos no mercado</p>
+  <!-- Services Section -->
+  <section id="services" class="py-16 md:py-28 bg-primary-light02">
+    <div class="container max-w-screen-xl mx-auto px-4 text-center">
+      <h4 class="text-sm font-bold text-primary mb-4">SERVIÇOS</h4>
+      <h2 class="text-3xl md:text-4xl font-bold text-secondary-headline mb-12 sm:w-3/4 md:w-1/2 mx-auto">
+        Como podemos ajudá-lo a se sentir melhor?
+      </h2>
+
+      <div id="services-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <!-- Service items will be injected here by services.js -->
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- services section -->
-<section class="md:py-28 bg-primary-light02 lg:-mt-28 py-12">
-  <div class="container max-w-screen-xl mx-auto p-4 text-center mt-10 mb-4 service-content">
-    <h4 class="text-sm font-bold text-center text-primary mb-12">SERVIÇOS</h4>
-    <h2 class="text-secondary-headline font-bold text-4xl md:leading-snug sm:w-1/2 mx-auto mb-12">Como podemos ajudá-lo a se sentir melhor?</h2>
+  <!-- About Section -->
+   <section class="md:py-20 py-12">
+    <div class="py-12 max-w-screen-xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <!-- Image -->
+        <div class="flex justify-center">
+          <img src="./images/about.png" alt="About DoctorCare" class="w-full h-auto rounded-lg shadow-lg">
+        </div>
+        <!-- Text -->
+         <h4>SOBRE NÓS</h4>
+         <h1>Entenda quem somos e por que existimos</h1>
+         <p></p>
+                
+       </div>
+
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Service 1 -->
-     
-      
-
-      <!-- Service 2 -->
-      
-      
-
-      <!-- Service 3 -->
-     
-    </div>
-  </div>
-</section>
+   </section>
 
   <!-- Mobile menu toggle -->
   <script>
@@ -141,7 +146,7 @@
       menuIcon.classList.toggle("ri-close-line");
     });
   </script>
-  <!-- services container -->
-   <script src="js/services.js"></script>
+  <!-- External JS (unchanged) -->
+  <script src="js/services.js"></script>
 </body>
 </html>
