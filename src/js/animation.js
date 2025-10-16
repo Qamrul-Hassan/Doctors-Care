@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", () => {
     easing: "ease-in-out",
     interval: 150,
     cleanup: true,
-    reset: false,
+    reset: true,
   });
 
   // Add the reveal-hidden class to elements (without hiding too early)
