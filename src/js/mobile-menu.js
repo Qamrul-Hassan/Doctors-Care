@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Close Menu
   closeMenuButton.addEventListener('click', () => {
     mobileMenu.classList.add('hidden');
-    document.body.style.overflow = '';
+    document.body.style.overflow = 'auto';
   });
 
   // Close when any link inside menu is clicked
